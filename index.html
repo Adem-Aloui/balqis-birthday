@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffe0eb">
+    <title>For Balqis ♡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Hearts -->
+    <div class="hearts" id="hearts"></div>
+
+    <!-- HOME SCREEN -->
+    <section id="homeScreen" class="screen active">
+        <div class="home-content">
+
+            <div class="small-label">A SPECIAL DAY FOR SOMEONE SPECIAL</div>
+
+            <h1 class="main-title">
+                Happy Birthday,
+                <span>Balqis ♡</span>
+            </h1>
+
+            <p class="home-description">
+                A little surprise, made with love,
+                just for you.
+            </p>
+
+            <div class="countdown-box">
+                <p class="countdown-title">UNTIL YOUR SPECIAL DAY</p>
+
+                <div class="countdown" id="countdown">
+                    <div class="time-unit">
+                        <span id="days">00</span>
+                        <small>Days</small>
+                    </div>
+
+                    <div class="time-unit">
+                        <span id="hours">00</span>
+                        <small>Hours</small>
+                    </div>
+
+                    <div class="time-unit">
+                        <span id="minutes">00</span>
+                        <small>Minutes</small>
+                    </div>
+
+                    <div class="time-unit">
+                        <span id="seconds">00</span>
+                        <small>Seconds</small>
+                    </div>
+                </div>
+            </div>
+
+            <button class="primary-button" onclick="goToPassword()">
+                Open Your Surprise
+                <span>♡</span>
+            </button>
+
+            <p class="footer-note">Made with love, just for you ♡</p>
+
+        </div>
+    </section>
+
+
+    <!-- PASSWORD SCREEN -->
+    <section id="passwordScreen" class="screen">
+        <div class="card">
+
+            <div class="decorative-heart">♡</div>
+
+            <p class="small-label">A LITTLE SECRET</p>
+
+            <h2>Before we begin...</h2>
+
+            <p class="card-description">
+                There's a little secret waiting for you.
+                Can you guess the password?
+            </p>
+
+            <div class="password-container">
+                <input
+                    type="password"
+                    id="passwordInput"
+                    placeholder="Enter the password"
+                    autocomplete="off"
+                >
+
+                <button class="eye-button" onclick="togglePassword()">
+                    👁
+                </button>
+            </div>
+
+            <p id="passwordError" class="error-message"></p>
+
+            <button class="primary-button" onclick="checkPassword()">
+                Unlock My Gift ♡
+            </button>
+
+            <button class="back-button" onclick="showScreen('homeScreen')">
+                ← Go Back
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- LETTER SCREEN -->
+    <section id="letterScreen" class="screen">
+        <div class="letter-container">
+
+            <p class="small-label">A LETTER FROM MY HEART</p>
+
+            <h2>To My Beautiful Balqis ♡</h2>
+
+            <p class="letter-intro">
+                I have something special to tell you...
+            </p>
+
+            <div class="envelope-wrapper" onclick="openLetter()">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-back"></div>
+                    <div class="letter-paper">
+                        <span>For You ♡</span>
+                    </div>
+                    <div class="envelope-front"></div>
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-heart">♡</div>
+                </div>
+            </div>
+
+            <p class="envelope-hint" id="envelopeHint">
+                Tap the envelope to open it
+            </p>
+
+           <div class="letter-message" id="letterMessage">
+
+    <h3>Happy Birthday, My Beautiful Balqis ♡</h3>
+
+    <p>
+        Alhamdulillah, among all the blessings Allah has
+        given me, knowing you is one of the most beautiful.
+        I'm truly grateful that our paths crossed.
+    </p>
+
+    <p>
+        Masha'Allah, you have a beautiful heart, a lovely
+        smile, and a way of making my days brighter.
+        I hope you always see how special you are.
+    </p>
+
+    <p>
+        Even though thousands of miles separate us,
+        I pray that Allah keeps our hearts close,
+        protects you wherever you go, and fills your
+        life with peace, happiness, and barakah.
+    </p>
+
+    <p>
+        I don't know what the future holds, but Insha'Allah,
+        if Allah has written a beautiful future for us,
+        may He make our journey together easy and full
+        of love, patience, and understanding.
+    </p>
+
+    <p>
+        On your birthday, I pray that Allah grants you
+        everything that is good for your dunya and akhirah,
+        answers your sincere duas, and keeps you smiling.
+    </p>
+
+    <p>
+        BarakAllahu feeki, my love.
+        May Allah always protect your beautiful heart.
+    </p>
+
+    <p class="letter-signature">
+        With love and duas,<br>
+        Your hubby ♡
+    </p>
+
+           </div>
+
+            <button
+                class="primary-button continue-button"
+                id="continueButton"
+                onclick="showMemories()"
+            >
+                Continue Our Story ♡
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- MEMORIES SCREEN -->
+<section id="memoriesScreen" class="screen">
+    <div class="memories-container">
+
+        <p class="small-label">OUR LITTLE WORLD ♡</p>
+
+        <h2>Our Memories</h2>
+
+        <p class="card-description">
+            Every moment with you is a memory
+            I want to keep forever.
+        </p>
+
+        <div class="memories-grid">
+
+            <div class="memory-card" onclick="openMemory(0)">
+                <img src="images/photo1.jpg" alt="Our memory">
+                <div class="memory-overlay">
+                    <span>♡</span>
+                    <p>Our beautiful moments</p>
+                </div>
+            </div>
+
+            <div class="memory-card" onclick="openMemory(1)">
+                <img src="images/photo2.jpg" alt="Our memory">
+                <div class="memory-overlay">
+                    <span>♡</span>
+                    <p>My favorite smile</p>
+                </div>
+            </div>
+
+            <div class="memory-card" onclick="openMemory(2)">
+                <img src="images/photo3.jpg" alt="Our memory">
+                <div class="memory-overlay">
+                    <span>♡</span>
+                    <p>A moment to remember</p>
+                </div>
+            </div>
+
+            <div class="memory-card" onclick="openMemory(3)">
+                <img src="images/photo4.jpg" alt="Our memory">
+                <div class="memory-overlay">
+                    <span>♡</span>
+                    <p>My happiness</p>
+                </div>
+            </div>
+
+            <div class="memory-card" onclick="openMemory(4)">
+                <img src="images/photo5.jpg" alt="Our memory">
+                <div class="memory-overlay">
+                    <span>♡</span>
+                    <p>Forever in my heart</p>
+                </div>
+            </div>
+
+            <div class="memory-card" onclick="openMemory(5)">
+                <img src="images/photo6.jpg" alt="Our memory">
+                <div class="memory-overlay">
+                    <span>♡</span>
+                    <p>Just you and me</p>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="memories-footer">
+            May Allah bless every beautiful moment
+            we share. Insha'Allah ♡
+        </p>
+
+        <button class="primary-button" onclick="showMusic()">
+            A Song For You ♡
+        </button>
+
+    </div>
+</section>
+
+
+<!-- MEMORY VIEWER -->
+<div id="memoryViewer" class="memory-viewer">
+
+    <button class="viewer-close" onclick="closeMemory()">×</button>
+
+    <button class="viewer-arrow viewer-prev" onclick="previousMemory()">
+        &#10094;
+    </button>
+
+    <div class="viewer-content">
+        <img id="viewerImage" src="" alt="Memory">
+
+        <p id="viewerCaption"></p>
+
+        <div class="viewer-counter" id="viewerCounter">
+            1 / 6
+        </div>
+    </div>
+
+    <button class="viewer-arrow viewer-next" onclick="nextMemory()">
+        &#10095;
+    </button>
+
+</div>
+
+    <!-- MUSIC SCREEN -->
+<section id="musicScreen" class="screen">
+    <div class="music-container">
+        <h2>Our Little Melody 🎵</h2>
+        <p class="music-subtitle">
+            A song to remind you how special you are.
+        </p>
+
+        <div class="record-container">
+    <div class="record" id="record">
+        <div class="record-center">
+            <img src="images/cover.jpg" alt="Album Cover">
+        </div>
+    </div>
+        </div>
+
+        <h3 class="song-title">A Special Song</h3>
+        <p class="song-artist">For my beautiful Balqis</p>
+
+        <audio id="birthdayAudio" src="music/song.mp3"></audio>
+
+        <div class="music-progress">
+            <input
+                type="range"
+                id="progressBar"
+                value="0"
+                min="0"
+                max="100"
+            >
+            <div class="music-time">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </div>
+
+        <div class="music-controls">
+            <button onclick="restartMusic()">⏮</button>
+            <button id="playButton" onclick="toggleMusic()">▶</button>
+            <button onclick="toggleMute()">🔊</button>
+        </div>
+
+        <button class="next-button" onclick="showLoveReasons()">
+            Continue 💗
+        </button>
+    </div>
+</section>
+    <!-- WHY I LOVE YOU SCREEN -->
+    <section id="loveReasonsScreen" class="screen">
+        <div class="card">
+            <p class="small-label">A FEW REASONS</p>
+            <h2>Why I Love You ♡</h2>
+
+            <div class="reasons-list">
+
+    <p>♡ Because Allah blessed my life with someone like you.</p>
+
+    <p>♡ Your beautiful smile that makes my heart happy.</p>
+
+    <p>♡ Your kindness, your patience, and your beautiful heart.</p>
+
+    <p>♡ The way even a simple conversation with you can brighten my day.</p>
+
+    <p>♡ Because I want to grow with you in faith, love, and understanding.</p>
+
+    <p>♡ Because you're not perfect, and neither am I, but we can always try to become better together.</p>
+
+            </div>
+
+            <button class="primary-button" onclick="showFinalMessage()">
+                One Last Thing ♡
+            </button>
+        </div>
+    </section>
+
+
+    <!-- FINAL MESSAGE SCREEN -->
+    <section id="finalScreen" class="screen">
+        <div class="card final-card">
+
+    <div class="decorative-heart">♡</div>
+
+    <p class="small-label">A DU'A FOR MY LOVE</p>
+
+    <h2>For You, My Balqis ♡</h2>
+
+    <p class="final-message">
+        Alhamdulillah for you, for every smile,
+        every conversation, and every beautiful
+        memory we've shared.
+    </p>
+
+    <p class="final-message">
+        I pray that Allah protects you from every
+        sadness, guides your steps, blesses your
+        dreams, and grants you success in this life
+        and the Hereafter.
+    </p>
+
+    <p class="final-message">
+        May Allah bring us together one day,
+        Insha'Allah, if it is خير for both of us.
+        Until then, may He keep us patient,
+        sincere, and close to Him.
+    </p>
+
+    <p class="final-message">
+        You are a beautiful blessing in my life,
+        and I will always pray for your happiness.
+    </p>
+
+    <p class="final-signature">
+        BarakAllahu feeki, my love.<br>
+        Your hubby ♡
+    </p>
+
+    <div class="final-hearts">♡ ♡ ♡</div>
+
+        <button class="next-button" onclick="showRoses()">
+    A Little More ❤️
+        </button>
+    </section>
+
+  <!-- ROSE SCREEN -->
+<section id="roseScreen" class="screen">
+    <div class="rose-container">
+
+        <h2>A Bouquet For You 🌹</h2>
+
+        <p class="rose-subtitle">
+            A little gift from my heart to yours.
+        </p>
+
+        <div class="rose-bouquet" id="roseBouquet"
+             onclick="openRoses()">
+
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+            <div class="rose">🌹</div>
+
+        </div>
+
+        <p class="rose-hint" id="roseHint">
+            Tap the flowers to make them bloom ❤️
+        </p>
+
+        <div class="rose-message" id="roseMessage">
+            <h3>For My Balqis ❤️</h3>
+
+            <p>
+                Just like these flowers, I hope our love
+                continues to grow beautifully.
+                May Allah fill your life with happiness,
+                peace, and endless blessings.
+                You deserve all the beautiful things
+                in this world. 🌷
+            </p>
+
+            <button class="next-button"
+                    onclick="showGift()">
+                One Last Surprise 🎁
+            </button>
+        </div>
+
+    </div>
+</section>
+
+
+  <!-- GIFT SCREEN -->
+<section id="giftScreen" class="screen">
+    <div class="gift-container">
+
+        <h2>One Last Surprise 🎁</h2>
+
+        <p class="gift-subtitle">
+            A little surprise just for you ❤️
+        </p>
+
+        <div class="gift-box" id="giftBox" onclick="openGift()">
+            <div class="gift-lid"></div>
+
+            <div class="gift-body">
+                <div class="gift-ribbon"></div>
+            </div>
+
+            <div class="gift-bow">🎀</div>
+        </div>
+
+        <p class="gift-hint" id="giftHint">
+            Tap the gift to open it! 💗
+        </p>
+
+        <div class="gift-message" id="giftMessage">
+            <div class="surprise-animation">
+                <span>💖</span>
+                <span>💕</span>
+                <span>💗</span>
+                <span>🌹</span>
+                <span>✨</span>
+                <span>💞</span>
+                <span>💝</span>
+            </div>
+
+            <h3 class="surprise-title">
+                You are my favorite gift! ❤️
+            </h3>
+
+            <p class="surprise-text">
+                Forever yours ♡
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+    <script src="script.js"></script>
+  <div id="floating-hearts"></div>
+  
+</body>
+</html>
